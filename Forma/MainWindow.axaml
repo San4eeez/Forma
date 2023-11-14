@@ -1,0 +1,60 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="400"
+		Width="600" Height="300"
+		
+        x:Class="Forma.MainWindow"
+        Title="Forma">
+	
+	
+	<Grid Background="DarkViolet" ShowGridLines="True" ColumnDefinitions=".5*, .9*, .5*" RowDefinitions="1*,3*,1*,1*">
+		
+		<Panel Classes="Zagolovok" Grid.Column="1" Grid.Row="0" >
+			<TextBlock TextWrapping="Wrap" TextAlignment="Center" FontSize="20" Padding="5">Проверить безопасность карты</TextBlock>
+		</Panel>
+
+		<StackPanel Grid.Row="1" Grid.Column="1" Spacing="10" Margin="10 10 10 10">
+			<TextBox  Watermark="ФИО"></TextBox>
+			<TextBox x:Name="Login" Watermark="Номер карты"></TextBox>
+
+			<StackPanel Orientation="Horizontal" Spacing="5">
+				<TextBox MaxLength="2"  x:Name="Password"  HorizontalAlignment="Left" Watermark="Month "></TextBox>
+				<TextBox MaxLength="2" x:Name="Password2" HorizontalAlignment="Right" Watermark="Year "></TextBox>
+			<TextBox Margin="1" HorizontalAlignment="Right" MaxLength="3" TextAlignment="Center"  x:Name="CVV" Watermark="CVV"></TextBox>
+				
+			</StackPanel>
+		
+		
+		</StackPanel>
+		<CheckBox Grid.Column="1" Grid.Row="2" Content="Даю согласие на передачу данных компании ООО 'Дима Саша'" Name="CheckBox1" Margin="5"/>
+
+		<StackPanel Grid.Column="0" Grid.Row="1">
+			<TextBlock>Укажите ваш баланс</TextBlock>
+			<RadioButton Content="Менее 1000" Name="RadioButton1" Margin="5"/>
+			<RadioButton Content="Менее 5000" Name="RadioButton2" Margin="5"/>
+			<RadioButton Content="Более 5000" Name="RadioButton3" Margin="5"/>
+		</StackPanel>
+		
+		<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Grid.Row="3">
+			<Button Content="Проверить" Click="Button_Click" Background="Green" Foreground="White" FontSize="25"></Button>
+		</StackPanel>
+
+		<StackPanel  Spacing="5" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" Grid.Row="0">
+			<Button Padding="5" Content="Login" Click="Button_Click_1" Background="DarkOrange" Foreground="White" FontSize="20"></Button>
+			<Button Padding="5" Content="Register" Click="Button_Click_2" Background="DarkOrange" Foreground="White" FontSize="20"></Button>
+
+		</StackPanel>
+		
+		<Image Grid.Column="2" Grid.Row="1" Name="Arc" Source="C:\torrents\arcad.jpg"></Image>
+		
+	</Grid>
+	
+	
+	
+	
+	
+	
+	
+</Window>

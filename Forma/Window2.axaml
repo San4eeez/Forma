@@ -1,0 +1,33 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="450"
+RequestedThemeVariant="Light"
+		Width="400" Height="450"
+        x:Class="Forma.Window2"
+        Title="Window2">
+		
+
+	<Grid Background="DarkViolet" ShowGridLines="True" ColumnDefinitions=".3*, .6*, .3*" RowDefinitions="2*,3*,2*">
+
+		<TextBlock Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Foreground="White" >Авторизация</TextBlock>
+
+		<StackPanel Margin="20 40" Grid.Column="1" Grid.Row="1" Spacing="20">
+			<TextBox Watermark="Email" Background="White"></TextBox>
+			<TextBox Watermark="Password" Background="White"></TextBox>
+		</StackPanel>
+
+
+
+		<DockPanel Grid.Column="1" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0 10">
+			<Button Content="Sign in" FontSize="14" Click="Button_Click_1" Background="Orange"></Button>
+			<Button Content="Not registered?" Click="Button_Click_2" Background="Transparent" Foreground="Orange"></Button>
+		</DockPanel>
+		
+		
+	</Grid>
+	
+	
+	
+</Window>

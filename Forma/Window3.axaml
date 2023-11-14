@@ -1,0 +1,30 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="450"
+		Width="400" Height="450"
+		RequestedThemeVariant="Light"
+        x:Class="Forma.Window3"
+        Title="Window3">
+		
+
+
+	<Grid Background="DarkViolet" ShowGridLines="True" ColumnDefinitions=".1*, .9*, .1*" RowDefinitions="2*,7*,2*" >
+
+		<TextBlock Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White">Регистрация</TextBlock>
+		
+		
+			<StackPanel MaxWidth="400" Margin="20 40" Grid.Column="1" Grid.Row="1" Spacing="20">
+				<TextBox Name="Email"  Watermark="Email" Background="White"></TextBox>
+				<TextBox Name="Passw" Watermark="Password" Background="White"></TextBox>
+				<TextBox Watermark="Confirm password" Background="White"></TextBox>
+				<CheckBox Content="Даю согласие на хранение, обработку, продажу моих данных." Foreground="White" ></CheckBox>
+				<CheckBox Foreground="White" IsEnabled="False" IsChecked="True" Content="Пожертвовать душу для строительства памятника Валесиусу."></CheckBox>
+				<Button Click="Button_Click" HorizontalAlignment="Center" Content="Отправить" Background="Orange" FontSize="18"></Button>
+			</StackPanel>
+		
+		
+	</Grid>
+	
+</Window>

@@ -1,0 +1,24 @@
+<Window 
+	
+	xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="260" d:DesignHeight="194"
+		 Width="400" Height="294"
+        x:Class="Forma.Window1"
+        Title="Window1">
+		
+	
+	
+	<Grid>
+		
+		<Image VerticalAlignment="Top" Name="Arc" Source="C:\torrents\akva.jpg"></Image>
+		<TextBlock FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Bottom">Ваши данные отправились на проверку!</TextBlock>
+	</Grid>
+	
+	
+	
+	
+	
+</Window>
