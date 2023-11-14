@@ -16,13 +16,13 @@
 		</Panel>
 
 		<StackPanel Grid.Row="1" Grid.Column="1" Spacing="10" Margin="10 10 10 10">
-			<TextBox  Watermark="ФИО"></TextBox>
-			<TextBox x:Name="Login" Watermark="Номер карты"></TextBox>
+			<TextBox Name="Fio" Watermark="ФИО"></TextBox>
+			<TextBox x:Name="Number" MaxLength="16" Watermark="Номер карты"></TextBox>
 
 			<StackPanel Orientation="Horizontal" Spacing="5">
-				<TextBox MaxLength="2"  x:Name="Password"  HorizontalAlignment="Left" Watermark="Month "></TextBox>
-				<TextBox MaxLength="2" x:Name="Password2" HorizontalAlignment="Right" Watermark="Year "></TextBox>
-			<TextBox Margin="1" HorizontalAlignment="Right" MaxLength="3" TextAlignment="Center"  x:Name="CVV" Watermark="CVV"></TextBox>
+				<TextBox MaxLength="2"  Name="Mounth"  HorizontalAlignment="Left" Watermark="Month "></TextBox>
+				<TextBox MaxLength="2" Name="Year" HorizontalAlignment="Right" Watermark="Year "></TextBox>
+			<TextBox Margin="1" Name="Cvv" HorizontalAlignment="Right" MaxLength="3" TextAlignment="Center"  x:Name="CVV" Watermark="CVV"></TextBox>
 				
 			</StackPanel>
 		
