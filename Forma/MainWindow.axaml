@@ -16,8 +16,10 @@
 		</Panel>
 
 		<StackPanel Grid.Row="1" Grid.Column="1" Spacing="10" Margin="10 10 10 10">
+			<TextBlock Foreground="Red" Background="White" IsVisible="False" FontWeight="Bold" FontSize="16" Name="Textik">Подтвердите передачу данных!</TextBlock>
+			<TextBlock Foreground="Red" Background="White" IsVisible="False" Name="Durak2">Провеь правильность ввода!</TextBlock>
 			<TextBox Name="Fio" Watermark="ФИО"></TextBox>
-			<TextBox x:Name="Number" MaxLength="16" Watermark="Номер карты"></TextBox>
+			<TextBox Name="Number" MaxLength="17" Watermark="Номер карты"></TextBox>
 
 			<StackPanel Orientation="Horizontal" Spacing="5">
 				<TextBox MaxLength="2"  Name="Mounth"  HorizontalAlignment="Left" Watermark="Month "></TextBox>
@@ -28,13 +30,13 @@
 		
 		
 		</StackPanel>
-		<CheckBox Grid.Column="1" Grid.Row="2" Content="Даю согласие на передачу данных компании ООО 'Дима Саша'" Name="CheckBox1" Margin="5"/>
+		<CheckBox Grid.Column="1" Grid.Row="2" Content="Даю согласие на передачу данных компании ООО 'Дима Саша'" Name="CheckBox1" IsChecked="False" Margin="5"/>
 
 		<StackPanel Grid.Column="0" Grid.Row="1">
 			<TextBlock>Укажите ваш баланс</TextBlock>
-			<RadioButton Content="Менее 1000" Name="RadioButton1" Margin="5"/>
-			<RadioButton Content="Менее 5000" Name="RadioButton2" Margin="5"/>
-			<RadioButton Content="Более 5000" Name="RadioButton3" Margin="5"/>
+			<RadioButton Content="Менее 1000" Name="RadioButton1" IsChecked="False" Margin="5"/>
+			<RadioButton Content="Менее 5000" Name="RadioButton2" IsChecked="False" Margin="5"/>
+			<RadioButton Content="Более 5000" Name="RadioButton3" IsChecked="False" Margin="5"/>
 		</StackPanel>
 		
 		<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Grid.Row="3">
