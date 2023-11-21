@@ -42,6 +42,7 @@
 					<Image MaxHeight="100" Name="Ca2" IsVisible="False" Source="avares://Forma/Assets/ca2.jpeg"></Image>
 					<Image MaxHeight="100" Name="Ca3" IsVisible="False" Source="avares://Forma/Assets/ca3.jpeg"></Image>
 				</StackPanel>
+			<TextBlock Background="White" Foreground="Green" IsVisible="False" Name="RightCapt">Correct</TextBlock>
 			<TextBlock Background="White" Foreground="Red" Name="AlertCapt" IsVisible="False"> Проверьте правильность ввода капчи</TextBlock>
 			<TextBox Watermark="Captcha" Name="CaptEnter" Background="White"></TextBox>
 			<StackPanel Orientation="Horizontal" Spacing="10">

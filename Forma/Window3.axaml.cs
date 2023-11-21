@@ -11,8 +11,20 @@ public partial class Window3 : Window
 {
     NpgsqlDataSource dataSource;
     private int kart;
-    private string correct;
+    private string correct = "0";
     private bool kaptchaProsel = false;
+    private int test25;
+
+
+    /*public void test2()
+    {
+        await using (var cmd = new NpgsqlCommand("SELECT COUNT(*) FROM users WHERE login = @login AND pwd = @pwd", conn))
+
+
+            cmd.Parameters.AddWithValue("password", test25);
+        }
+        
+    }*/
 
     public Window3()
     {
@@ -115,6 +127,7 @@ public partial class Window3 : Window
         {
             kaptchaProsel = true;
             AlertCapt.IsVisible = false;
+            RightCapt.IsVisible = true;
         }
         else
         {
