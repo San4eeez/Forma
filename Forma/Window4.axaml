@@ -7,15 +7,17 @@
 		Width="800" Height="450"
         x:Class="Forma.Window4"
         Title="Window4">
-
-
-	<Grid ShowGridLines="True" RowDefinitions="*,*,*,*" ColumnDefinitions="*,*,*,*,*">
-		<TextBlock Name="Valerchiks" ></TextBlock>
 	
-		
-		
-		
-		
+	
+	
+	<Grid>
+		<ItemsControl x:Name="TextBlocksContainer">
+			<ItemsControl.ItemsPanel>
+				<ItemsPanelTemplate>
+					<WrapPanel Orientation="Horizontal" />
+				</ItemsPanelTemplate>
+			</ItemsControl.ItemsPanel>
+		</ItemsControl>
 	</Grid>
 	
 	

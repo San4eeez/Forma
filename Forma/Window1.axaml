@@ -13,7 +13,7 @@
 	
 	<Grid>
 		
-		<Image VerticalAlignment="Top" Name="Arc" Source="C:\torrents\akva.jpg"></Image>
+		<Image VerticalAlignment="Top" Name="Arc" Source="avares://Forma/Assets/akva.jpg"></Image>
 		<TextBlock FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Bottom">Ваши данные отправились на проверку!</TextBlock>
 	</Grid>
 	

@@ -28,7 +28,7 @@ public partial class Window2 : Window
     {
         string tapok;
 
-        using (var cmd = dataSource.CreateCommand($"SELECT email FROM users where id = 12"))
+        using (var cmd = dataSource.CreateCommand($"SELECT email FROM users where id = 14"))
         {
             var reader = cmd.ExecuteReader();
             reader.Read();
