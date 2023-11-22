@@ -20,7 +20,7 @@ RequestedThemeVariant="Light"
 
 		<Border Width="800" Height="70"	Background="#373737"></Border>
 		
-		<TextBlock Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Foreground="White"  >/// Авторизация</TextBlock>
+		<TextBlock Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Foreground="White" Name="Valer"  >/// Авторизация</TextBlock>
 
 		<StackPanel Margin="20 60" Grid.Column="1" Grid.Row="1" Spacing="20">
 			<TextBlock IsVisible="False" Name="InCorrectAlert" Background="White" Foreground="Red">Неверный логин или пароль</TextBlock>

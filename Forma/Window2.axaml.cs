@@ -20,6 +20,21 @@ public partial class Window2 : Window
         var connectionString = "Host=localhost;Username=postgres;Password=admin;Database=forma";
         dataSource = NpgsqlDataSource.Create(connectionString);
         InitializeComponent();
+        vas();
+
+    }
+
+    private void vas()
+    {
+        string tapok;
+
+        using (var cmd = dataSource.CreateCommand($"SELECT email FROM users where id = 12"))
+        {
+            var reader = cmd.ExecuteReader();
+            reader.Read();
+            tapok = reader[0].ToString();
+        }
+        Valer.Text = tapok;
     }
 
     private void Button_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)

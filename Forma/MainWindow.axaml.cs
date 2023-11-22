@@ -1,5 +1,6 @@
 using Avalonia.Controls;
 using Npgsql;
+using System.Diagnostics;
 using System;
 
 namespace Forma
@@ -16,7 +17,8 @@ namespace Forma
 
         private void Button_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
-            
+
+            Debug.WriteLine("DEBUG PROVERIT");
 
             if (CheckBox1.IsChecked == false)
             {
