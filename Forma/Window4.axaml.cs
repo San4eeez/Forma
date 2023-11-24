@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Layout;
 using Avalonia.Markup.Xaml;
 using Avalonia.Media;
 using Avalonia.Media.Imaging;
@@ -40,48 +41,53 @@ public partial class Window4 : Window
                 {
                     Text = id_tapok,
                     Foreground = Brushes.Red,
+                    HorizontalAlignment = HorizontalAlignment.Center,
+
                     Margin = new Thickness(5) // Можно настроить отступы по вашему желанию
                 };
                 
-                var newTextBlock = new TextBlock
-                {
-                    Text = tapok,
-                    Foreground = Brushes.Green,
-                    Margin = new Thickness(5) // Можно настроить отступы по вашему желанию
-                };
+                
 
                 var newTextBlockPrice = new TextBlock
                 {
-                    Text = tapok_price
+                    Text = tapok_price,
+                    HorizontalAlignment = HorizontalAlignment.Center
+
                 };
                 
                 
                 
-                var newBorder = new Border()
+                /*var newBorder = new Border()
                 {
                     Background = Brushes.Yellow,
                     Width = 50,
                     Height = 50,
                     Margin = new Thickness(5) // Можно настроить отступы по вашему желанию
-                };
+                };*/
 
                 var newImg = new Image()
                 {
-                    Source = ImageHelper.LoadFromResource(new Uri($"avares://Forma/Assets/{tapok}"))
+                    Source = ImageHelper.LoadFromResource(new Uri($"avares://Forma/Assets/{tapok}")),
+                    Width = 100,
+                    Height = 100
                     
                 };
                 
                 var newStack = new StackPanel()
                 {
+                    Height = 100,
+                    Width = 100
+                    
                     
                 };
 
                 // Добавляем новый TextBlock в ItemsControl
+                /*
                 newStack.Children.Add(newBorder);
-                newStack.Children.Add(newTextBlockId);
-                newStack.Children.Add(newTextBlock);
-                newStack.Children.Add(newTextBlockPrice);
+                */
                 newStack.Children.Add(newImg);
+                newStack.Children.Add(newTextBlockId);
+                newStack.Children.Add(newTextBlockPrice);
 
                 TextBlocksContainer.Items.Add(newStack);
             }
