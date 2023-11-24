@@ -68,6 +68,7 @@ public partial class Window4 : Window
                 var newImg = new Image()
                 {
                     Source = ImageHelper.LoadFromResource(new Uri($"avares://Forma/Assets/{tapok}"))
+                    
                 };
                 
                 var newStack = new StackPanel()
