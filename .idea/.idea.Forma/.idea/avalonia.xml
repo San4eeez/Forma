@@ -4,6 +4,7 @@
     <option name="projectPerEditor">
       <map>
         <entry key="Forma/MainWindow.axaml" value="Forma/Forma.csproj" />
+        <entry key="Forma/Window2.axaml" value="Forma/Forma.csproj" />
         <entry key="Forma/Window4.axaml" value="Forma/Forma.csproj" />
       </map>
     </option>
