@@ -9,14 +9,39 @@
    
         
         
-        <Grid>
-                <ItemsControl x:Name="TextBlocksContainer">
-                        <ItemsControl.ItemsPanel>
-                                <ItemsPanelTemplate>
-                                        <WrapPanel Orientation="Horizontal" />
-                                </ItemsPanelTemplate>
-                        </ItemsControl.ItemsPanel>
-                </ItemsControl>
-        </Grid>
+        <StackPanel >
+                <StackPanel>
+                        <TextBlock HorizontalAlignment="Left" FontSize="24"> ///Мега </TextBlock>
+                        <TextBlock HorizontalAlignment="Right">Корзина</TextBlock>
+                </StackPanel>
+                
+                <Grid  ShowGridLines="True" ColumnDefinitions=".1*, .2*, .1*" RowDefinitions="1*,3*,1*,1*">
+                        
+                        
+                <StackPanel Grid.Column="1">
+                        <ItemsControl x:Name="TextBlocksContainer2">
+                                <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                                <WrapPanel Orientation="Horizontal" />
+                                        </ItemsPanelTemplate>
+                                </ItemsControl.ItemsPanel>
+                        </ItemsControl>
+                </StackPanel>
+                        
+                        <StackPanel Grid.Column="1" Grid.Row="1">
+                                
+                                <ItemsControl x:Name="TextBlocksContainer">
+                                        <ItemsControl.ItemsPanel>
+                                                <ItemsPanelTemplate>
+                                                        <WrapPanel Orientation="Horizontal" />
+                                                </ItemsPanelTemplate>
+                                        </ItemsControl.ItemsPanel>
+                                </ItemsControl>
+                        </StackPanel>
+                        
+                </Grid>
+                
+                
+        </StackPanel>
         
 </Window>

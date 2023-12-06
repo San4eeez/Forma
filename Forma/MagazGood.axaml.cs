@@ -27,7 +27,7 @@ public partial class MagazGood : Window
     
      private void vas(int id)
     {
-        using (var cmd = dataSource.CreateCommand($"SELECT name,forlink,price from magaz where id = {id}"))
+        using (var cmd = dataSource.CreateCommand($"SELECT name,forlink,price,description from magaz where id = {id}"))
         {
             var reader = cmd.ExecuteReader();
             
@@ -36,6 +36,7 @@ public partial class MagazGood : Window
                 string id_tapok = reader[0].ToString();
                 string tapok = reader[1].ToString();
                 string tapok_price = reader[2].ToString();
+                string tapok_description = reader[3].ToString();
                 
                 // Создаем новый TextBlock
                 var newTextBlockId = new TextBlock
@@ -55,32 +56,38 @@ public partial class MagazGood : Window
                 {
                     Text = tapok_price
                 };
-                
-                
-                
-                var newBorder = new Border()
+
+                var newDesc = new TextBlock()
                 {
-                    Background = Brushes.Yellow,
-                    Width = 50,
-                    Height = 50,
-                    Margin = new Thickness(5) // Можно настроить отступы по вашему желанию
+                    Text = tapok_description
                 };
+                
+                
+               
                 var newImg = new Image()
                 {
-                    Source = ImageHelper.LoadFromResource(new Uri($"avares://Forma/Assets/{tapok}"))
-
+                    Source = ImageHelper.LoadFromResource(new Uri($"avares://Forma/Assets/{tapok}")),
+                    MaxHeight = 300,
+                    MaxWidth = 400,
+                    HorizontalAlignment = HorizontalAlignment.Center
+                    
                 };
 
                 var newStack = new StackPanel()
                 {
                     
                 };
-                // Добавляем новый TextBlock в ItemsControl
-                newStack.Children.Add(newBorder);
+                // Все теги пихаю в стак, его и отсылаю
+                
                 newStack.Children.Add(newTextBlockId);
                 newStack.Children.Add(newTextBlock);
                 newStack.Children.Add(newTextBlockPrice);
+                newStack.Children.Add(newDesc);
+                /*
                 newStack.Children.Add(newImg);
+                */
+                
+                TextBlocksContainer2.Items.Add(newImg);
                 TextBlocksContainer.Items.Add(newStack);
             }
         }
